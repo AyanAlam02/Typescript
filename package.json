@@ -1,0 +1,12 @@
+{
+  "name": "giaic-typescript-45-assignments-and-node-projects",
+  "version": "1.0.0",
+  "description": "My All 45 Assignments And All Node Projects Of Typescript",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ayan Alam",
+  "license": "ISC"
+}
