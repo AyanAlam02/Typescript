@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 
+import chalk from "chalk";
 import inquirer from "inquirer";
 
-console.log("Welcome, It Is A Simple Calculator.");
+console.log(chalk.blue("Welcome, It Is A Simple Calculator."));
 
 const answer = await inquirer.prompt([
-  { message: "Enter First Number", type: "number", name: "firstNumber" },
-  { message: "Enter Second Number", type: "number", name: "secondNumber" },
+  { message: chalk.yellowBright("Enter First Number"), type: "number", name: "firstNumber" },
+  { message: chalk.yellowBright("Enter Second Number"), type: "number", name: "secondNumber" },
   {
-    message: "Select one of the Operators to perform calculation",
+    message: chalk.blueBright.bold("Select one of the Operators to perform calculation"),
     type: "list",
     name: "operator",
     choices: [
@@ -35,6 +36,6 @@ if (answer.operator === "Addition") {
 } else if (answer.operator === "Exponential") {
   console.log(answer.firstNumber ** answer.secondNumber);
 } else {
-  console.log("Please, Select Valid Operator.");
+  console.log(chalk.redBright.bold("Error: Please, Select Valid Operator."));
 }
-console.log("\n\nMade By Ayan Alam");
+console.log(chalk.gray("\n\nMade By Ayan Alam"));
